@@ -1,0 +1,29 @@
+package Lb5;
+
+import java.util.Scanner;
+
+public class Lab5 {
+
+    public static void main(String[] args) {
+    	
+      try (Scanner scanner = new Scanner(System.in)) {
+
+    	  
+        System.out.print("Делимое: ");
+        int dividend = scanner.nextInt();
+
+        System.out.print("Делитель: ");
+        int divisor = scanner.nextInt();
+
+        
+        try {
+            int result = dividend / divisor;
+            System.out.println("Вывод: " + result);
+            
+        } catch (ArithmeticException ex) {
+            System.out.println("Деление на ноль невозможно.");
+            
+        }
+    }
+}
+}
